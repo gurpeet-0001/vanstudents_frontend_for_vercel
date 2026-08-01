@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  color: #1f2937;
+  background-color: #f5f1e8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f5ee 0%, #f1ebdc 45%, #ece4d3 100%);
+  color: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+.card-surface {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #e5dccb;
+  box-shadow: 0 10px 30px rgba(29, 39, 54, 0.08);
+}
+
+.table-classic thead {
+  background: linear-gradient(90deg, #7c5c2b 0%, #a67c52 100%);
+  color: white;
+}
+
+.table-classic th,
+.table-classic td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #efe5d5;
+}
+
+.table-classic tr:hover {
+  background: #faf6ee;
+}
