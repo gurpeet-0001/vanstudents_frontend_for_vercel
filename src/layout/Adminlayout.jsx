@@ -34,7 +34,7 @@ export default function AdminLayout() {
             </div>
 
             <div className="hidden md:flex items-center gap-5">
-              <button className="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg">Logout</button>
+              <button onClick={handleLogout} className="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg">Logout</button>
             </div>
           </div>
         </div>
