@@ -40,11 +40,14 @@ function Allstudents() {
   }, [location.key]);
 
   const filtered = useMemo(() => {
-    const q = (query || '').trim().toLowerCase();
+    const q = query.trim().toLowerCase();
+
     if (!q) return students;
-    return students.filter(s => {
-      const name = (s.name || '').toLowerCase();
-      const phone = (s.phone || '').toString().toLowerCase();
+
+    return students.filter((s) => {
+      const name = (s.std_name || '').toLowerCase();
+      const phone = (s.phoneNumber || '').toString().toLowerCase();
+
       return name.includes(q) || phone.includes(q);
     });
   }, [students, query]);
