@@ -99,6 +99,7 @@ function AddStudent() {
           {message.text}
         </div>
       )}
+      <p className="text-sm grey-200">NOTE: Parent must exsits before adding a student on the same number</p>
     </div>
   );
 }
