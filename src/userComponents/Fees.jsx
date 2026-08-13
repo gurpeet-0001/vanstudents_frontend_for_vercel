@@ -49,9 +49,8 @@ export default function Fees() {
     return (
         <div className="p-6 bg-gray-50 min-h-screen">
             <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="bg-gradient-to-r from-slate-700 via-slate-800 to-slate-900 text-white shadow-xl border-b border-amber-100/20 p-6 ">
-                    <h2 className="text-3xl font-bold">Student Fee Details</h2>
-                    <p className="mt-2 text-blue-100">Overview for {student.std_name || 'Student'}</p>
+                <div className="bg-gradient-to-r from-slate-700 via-slate-800 to-slate-900 text-white shadow-xl border-b border-amber-100/20 p-3 ">
+                    <h2 className="text-2md ">Student Fee Details for {student.std_name || 'Student'}</h2>
                 </div>
 
                 <div className="p-6 grid md:grid-cols-2 gap-6">

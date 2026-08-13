@@ -143,17 +143,10 @@ export default function EditStudents() {
 
             {student && (
                 <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div className="bg-gradient-to-r from-slate-700 via-slate-800 to-slate-900 text-white shadow-xl border-b border-amber-100/20 p-3 ">
+                    <h2 className="text-2md ">Student Fee Details for {student.std_name || 'Student'}</h2>
+                </div>
 
-                    {/* Header */}
-                    <div className="bg-gradient-to-r from-slate-700 via-slate-800 to-slate-900 text-white shadow-xl border-b border-amber-100/20 p-6">
-                        <h2 className="text-3xl font-bold">
-                            Edit Student
-                        </h2>
-
-                        <p className="mt-2 text-blue-100">
-                            Manage fees for {student.std_name}
-                        </p>
-                    </div>
 
                     {/* Student Info + Add Fee */}
                     <div className="p-6 grid md:grid-cols-2 gap-6">
