@@ -2,6 +2,9 @@ import React from "react"
 import { Routes, Route, Navigate } from "react-router-dom"
 import { Login } from "./pages/Login"
 import { Authlayout } from "./layout/Authlayout"
+import RoleRedirect from "./pages/RoleRedirect.jsx"
+
+//layouts
 import Mainlayout from "./layout/Mainlayout"
 import Protectedroute from "./layout/Protectedroute"
 
@@ -22,7 +25,7 @@ export const App = () => {
     <>
       <Routes>
 
-        <Route path="/" element={<Navigate to="/students" replace />} />
+        <Route path="/" element={<RoleRedirect/>} />
         
         <Route element={<Authlayout />}>
           <Route path="/login" element={<Login />}></Route>

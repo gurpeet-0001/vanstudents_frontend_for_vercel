@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import api from "../middleware/axios.jsx"
-import { replace, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import {jwtDecode} from 'jwt-decode'
 
 export const Login = () => {
