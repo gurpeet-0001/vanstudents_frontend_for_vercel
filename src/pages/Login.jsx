@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import api from "../middleware/axios.jsx"
 import { useNavigate } from 'react-router-dom'
-import {jwtDecode} from 'jwt-decode'
+import { jwtDecode } from 'jwt-decode'
 
 export const Login = () => {
   const [phoneNumber, setphoneNumber] = useState('');
@@ -16,11 +16,11 @@ export const Login = () => {
 
       //now see if the user is admin or not
       const decoded = jwtDecode(response.data.token)
-      if(decoded.role === 'user'){
-        navigate('/students' );
+      if (decoded.role === 'user') {
+        navigate('/students');
       }
-      else{
-        navigate('/admin/students' );
+      else {
+        navigate('/admin/students');
       }
       return
     } catch (error) {
@@ -30,7 +30,9 @@ export const Login = () => {
 
   }
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex flex-col gap-10 items-center justify-center bg-gray-100">
+
+      <p className="text-center italic text-red-500 underline">This site was made mainly to show how Rolebased authentication is done using Tokens -JWT</p>
       <div className="w-full max-w-sm bg-white p-8 rounded-xl shadow-lg">
         <h1 className="text-3xl font-bold text-center mb-6">Login</h1>
 
@@ -67,6 +69,13 @@ export const Login = () => {
           </button>
         </form>
       </div>
+      <div className="text-center italic text-red-500 underline">
+        <p>Use phoneNo. 1234567890 & pass. admin@12 for Admin login</p>
+        <p>OR</p>
+        <p>Use phoneNo. 1122334455 & pass. 1122334455 for User login.</p>
+        <p> You can create your own user in admin panel too</p>
+      </div>
+
     </div>
   );
 };
